@@ -13,8 +13,10 @@
   <ItemGroup>
     <PackageReference Include="Amazon.Lambda.Core" Version="2.1.0" />
     <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0-preview.3.22175.4" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConsultaCep.Application\ConsultaCep.Application.csproj" />
+    <ProjectReference Include="..\ConsultaCep.Infrastructure.Integration\ConsultaCep.Infrastructure.Integration.csproj" />
   </ItemGroup>
 </Project>

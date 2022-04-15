@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using ConsultaCep.Application.Dtos.Responses;
 using ConsultaCep.Application.Interfaces;
 using ConsultaCep.Infrastructure.Notification.Abstractions;
@@ -10,17 +11,21 @@ namespace ConsultaCep.Infrastructure.Integration.Services
         {
             var serviceResponse = new CepIntegrationServiceResponse(string.Empty);
 
-            var httpClient = new HttpClient{ BaseAddress = new Uri("https://viacep.com.br/ws/")};
-            
-            httpClient.DefaultRequestHeaders.Accept.Add(
-                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            var httpClient = new HttpClient { BaseAddress = new Uri("https://viacep.com.br/ws/") };
+
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             try
             {
-                var response = await httpClient.GetAsync($"{cep}/json/");
+                var response = httpClient.GetAsync($"{cep}/json/").Result;
 
                 if (response.IsSuccessStatusCode)
-                    serviceResponse.Address  = response.Content.ReadAsStringAsync().Result;
+                    serviceResponse.Address = response.Content.ReadAsStringAsync().Result;
+                else
+                {
+                    AddErrorNotification("Address not found");
+                    return await Task.FromResult<CepIntegrationServiceResponse>(default);
+                }
             }
             catch (System.Exception)
             {
@@ -29,7 +34,7 @@ namespace ConsultaCep.Infrastructure.Integration.Services
             }
             finally
             {
-                 httpClient.Dispose();
+                httpClient.Dispose();
             }
 
             return await Task.FromResult<CepIntegrationServiceResponse>(serviceResponse);

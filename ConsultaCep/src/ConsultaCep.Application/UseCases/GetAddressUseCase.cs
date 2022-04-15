@@ -11,27 +11,26 @@ namespace ConsultaCep.Application.UseCases
         public GetAddressUseCase(ICepIntegrationService cepIntegrationService)
             => _cepIntegrationService = cepIntegrationService;
 
-        public async Task<GetAddressUseCaseResponse?> ExecuteAsync(string cep)
+        public async Task<GetAddressUseCaseResponse> ExecuteAsync(string cep)
         {
             if (HasErrorNotification)
-                return await Task.FromResult<GetAddressUseCaseResponse?>(default);
+                return await Task.FromResult<GetAddressUseCaseResponse>(default);
 
             var serviceResponse = await _cepIntegrationService.GetAddressAsync(cep);
 
             if (_cepIntegrationService.HasErrorNotification)
             {
                 AddErrorNotification(_cepIntegrationService.ErrorNotificationResult);
-                return await Task.FromResult<GetAddressUseCaseResponse?>(default);
+                return await Task.FromResult<GetAddressUseCaseResponse>(default);
             }
 
-            return await Task.FromResult<GetAddressUseCaseResponse>(
-                new GetAddressUseCaseResponse(serviceResponse.Address));
+            return await Task.FromResult<GetAddressUseCaseResponse>(new GetAddressUseCaseResponse(serviceResponse.Address));
         }
 
         private void Validate(string cep)
         {
-            if (string.IsNullOrEmpty(cep))
-                AddErrorNotification("Cep not found");
+            if (string.IsNullOrEmpty(cep) || string.IsNullOrWhiteSpace(cep))
+                AddErrorNotification("Invalid zip code");
         }
     }
 }
