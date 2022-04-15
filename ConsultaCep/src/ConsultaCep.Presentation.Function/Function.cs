@@ -9,13 +9,13 @@ public class Function
 {
     
     /// <summary>
-    /// A simple function that takes a string and does a ToUpper
+    /// Returns the address of the zip code
     /// </summary>
-    /// <param name="input"></param>
+    /// <param name="cep"></param>
     /// <param name="context"></param>
     /// <returns></returns>
-    public string FunctionHandler(string input, ILambdaContext context)
+    public string FunctionHandler(string cep, ILambdaContext context)
     {
-        return input.ToUpper();
+        return cep.ToUpper();
     }
 }
