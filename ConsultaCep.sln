@@ -15,6 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C690B9F6-70B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsultaCep.Presentation.Function", "ConsultaCep\src\ConsultaCep.Presentation.Function\ConsultaCep.Presentation.Function.csproj", "{502C0C11-59A7-4AAE-96C9-9CA9E1241877}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsultaCep", "ConsultaCep", "{416C7979-F466-43CD-86C9-B7C0A342EA6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{43372BF5-7DF9-47BE-874E-A6A6E0F2165C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsultaCep.Tests", "ConsultaCep\test\ConsultaCep.Tests\ConsultaCep.Tests.csproj", "{9E8513B9-F7CB-4A68-ABFA-690B69A47374}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,9 +50,15 @@ Global
 		{502C0C11-59A7-4AAE-96C9-9CA9E1241877}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{502C0C11-59A7-4AAE-96C9-9CA9E1241877}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{502C0C11-59A7-4AAE-96C9-9CA9E1241877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E8513B9-F7CB-4A68-ABFA-690B69A47374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E8513B9-F7CB-4A68-ABFA-690B69A47374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E8513B9-F7CB-4A68-ABFA-690B69A47374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E8513B9-F7CB-4A68-ABFA-690B69A47374}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C690B9F6-70BF-4D16-AF79-F16F115FDB72} = {C8F213B4-9958-434D-A9AF-E14C6E7B3FB9}
 		{502C0C11-59A7-4AAE-96C9-9CA9E1241877} = {C690B9F6-70BF-4D16-AF79-F16F115FDB72}
+		{43372BF5-7DF9-47BE-874E-A6A6E0F2165C} = {416C7979-F466-43CD-86C9-B7C0A342EA6F}
+		{9E8513B9-F7CB-4A68-ABFA-690B69A47374} = {43372BF5-7DF9-47BE-874E-A6A6E0F2165C}
 	EndGlobalSection
 EndGlobal
