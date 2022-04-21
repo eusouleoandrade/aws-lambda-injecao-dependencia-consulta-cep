@@ -8,7 +8,7 @@ namespace ConsultaCep.Presentation.Function.Tests.Application.UseCases
         {
         }
         
-        [Fact]
+        [Fact]   
         public async void ShouldExecuteSucessfully()
         {
         }
