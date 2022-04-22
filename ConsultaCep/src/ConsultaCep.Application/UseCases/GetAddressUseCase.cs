@@ -13,6 +13,8 @@ namespace ConsultaCep.Application.UseCases
 
         public async Task<GetAddressUseCaseResponse> ExecuteAsync(string cep)
         {
+            Validate(cep);
+
             if (HasErrorNotification)
                 return await Task.FromResult<GetAddressUseCaseResponse>(default);
 

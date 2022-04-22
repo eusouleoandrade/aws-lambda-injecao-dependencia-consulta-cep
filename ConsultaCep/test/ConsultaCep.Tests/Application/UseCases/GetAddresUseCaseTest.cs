@@ -49,5 +49,27 @@ namespace ConsultaCep.Presentation.Function.Tests.Application.UseCases
             Assert.False(_getAddressUseCase.HasErrorNotification);
             Assert.Empty(_getAddressUseCase.ErrorNotificationResult);
         }
+
+        /// <summary>
+        /// Check ExecuteAsync validation failure when cep is empty
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <returns></returns>
+        [Theory(DisplayName = "GetCustomerUseCase - Must run successfully")]
+        [InlineData("")]
+        [InlineData(" ")]
+        public async void ShouldNotExecute_WhenNotSendingCep(string cep)
+        {
+            // Act
+            var useCaseResponse = await _getAddressUseCase.ExecuteAsync(cep);
+
+            // Assert
+            Assert.False(_getAddressUseCase.HasSuccessNotification);
+            Assert.True(_getAddressUseCase.HasErrorNotification);
+            Assert.NotEmpty(_getAddressUseCase.ErrorNotificationResult);
+            Assert.Empty(_getAddressUseCase.SuccessNotificationResult);
+            Assert.Null(useCaseResponse);
+            Assert.Contains(_getAddressUseCase.ErrorNotificationResult, item => item.Message == "Invalid zip code");
+        }
     }
 }
