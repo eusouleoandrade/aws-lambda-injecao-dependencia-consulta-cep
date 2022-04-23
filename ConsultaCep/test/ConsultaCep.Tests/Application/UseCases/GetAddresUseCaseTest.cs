@@ -53,9 +53,9 @@ namespace ConsultaCep.Presentation.Function.Tests.Application.UseCases
         /// <summary>
         /// Check ExecuteAsync validation failure when cep is empty
         /// </summary>
-        /// <param name="customerId"></param>
+        /// <param name="cep"></param>
         /// <returns></returns>
-        [Theory(DisplayName = "GetCustomerUseCase - Must run successfully")]
+        [Theory(DisplayName = "GetCustomerUseCase - Should run with failure when cep is empty")]
         [InlineData("")]
         [InlineData(" ")]
         public async void ShouldNotExecute_WhenNotSendingCep(string cep)
