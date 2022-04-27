@@ -1,0 +1,408 @@
+{
+  "ConsultaCep.Presentation.Function.dll": {
+    "/Users/leandroandrade/Source/Personal/aws-lambda-injecao-dependencia-consulta-cep/ConsultaCep/src/ConsultaCep.Presentation.Function/Function.cs": {
+      "ConsultaCep.Presentation.Function.Function": {
+        "System.Void ConsultaCep.Presentation.Function.Function::ConfigureServices()": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": []
+        },
+        "System.Void ConsultaCep.Presentation.Function.Function::.ctor()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "ConsultaCep.Presentation.Function.Function/<>c": {
+        "System.String ConsultaCep.Presentation.Function.Function/<>c::<FunctionHandler>b__4_0(ConsultaCep.Infrastructure.Notification.Models.NotificationMessage)": {
+          "Lines": {
+            "36": 0
+          },
+          "Branches": []
+        }
+      },
+      "ConsultaCep.Presentation.Function.Function/<FunctionHandler>d__4": {
+        "System.Void ConsultaCep.Presentation.Function.Function/<FunctionHandler>d__4::MoveNext()": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "38": 0,
+            "39": 0
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 182,
+              "EndOffset": 184,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 182,
+              "EndOffset": 249,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ConsultaCep.Application.dll": {
+    "/Users/leandroandrade/Source/Personal/aws-lambda-injecao-dependencia-consulta-cep/ConsultaCep/src/ConsultaCep.Application/UseCases/GetAddressUseCase.cs": {
+      "ConsultaCep.Application.UseCases.GetAddressUseCase": {
+        "System.Void ConsultaCep.Application.UseCases.GetAddressUseCase::Validate(System.String)": {
+          "Lines": {
+            "33": 3,
+            "34": 3,
+            "35": 2,
+            "36": 3
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 34,
+              "Offset": 7,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 34,
+              "Offset": 20,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void ConsultaCep.Application.UseCases.GetAddressUseCase::.ctor(ConsultaCep.Application.Interfaces.ICepIntegrationService)": {
+          "Lines": {
+            "11": 3,
+            "12": 3
+          },
+          "Branches": []
+        }
+      },
+      "ConsultaCep.Application.UseCases.GetAddressUseCase/<ExecuteAsync>d__2": {
+        "System.Void ConsultaCep.Application.UseCases.GetAddressUseCase/<ExecuteAsync>d__2::MoveNext()": {
+          "Lines": {
+            "15": 3,
+            "16": 3,
+            "18": 3,
+            "19": 2,
+            "21": 1,
+            "23": 1,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "29": 1,
+            "30": 3
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 80,
+              "EndOffset": 82,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 18,
+              "Offset": 80,
+              "EndOffset": 196,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 23,
+              "Offset": 356,
+              "EndOffset": 361,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 23,
+              "Offset": 356,
+              "EndOffset": 507,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/leandroandrade/Source/Personal/aws-lambda-injecao-dependencia-consulta-cep/ConsultaCep/src/ConsultaCep.Application/Dtos/Responses/CepIntegrationServiceResponse.cs": {
+      "ConsultaCep.Application.Dtos.Responses.CepIntegrationServiceResponse": {
+        "System.String ConsultaCep.Application.Dtos.Responses.CepIntegrationServiceResponse::get_Address()": {
+          "Lines": {
+            "5": 2
+          },
+          "Branches": []
+        },
+        "System.Void ConsultaCep.Application.Dtos.Responses.CepIntegrationServiceResponse::.ctor(System.String)": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/leandroandrade/Source/Personal/aws-lambda-injecao-dependencia-consulta-cep/ConsultaCep/src/ConsultaCep.Application/Dtos/Responses/GetAddressUseCaseResponse.cs": {
+      "ConsultaCep.Application.Dtos.Responses.GetAddressUseCaseResponse": {
+        "System.String ConsultaCep.Application.Dtos.Responses.GetAddressUseCaseResponse::get_Address()": {
+          "Lines": {
+            "5": 1
+          },
+          "Branches": []
+        },
+        "System.Void ConsultaCep.Application.Dtos.Responses.GetAddressUseCaseResponse::.ctor(System.String)": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "ConsultaCep.Infrastructure.Integration.dll": {
+    "/Users/leandroandrade/Source/Personal/aws-lambda-injecao-dependencia-consulta-cep/ConsultaCep/src/ConsultaCep.Infrastructure.Integration/Services/ViaCepService.cs": {
+      "ConsultaCep.Infrastructure.Integration.Services.ViaCepService/<GetAddressAsync>d__0": {
+        "System.Void ConsultaCep.Infrastructure.Integration.Services.ViaCepService/<GetAddressAsync>d__0::MoveNext()": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "16": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 165,
+              "EndOffset": 167,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 165,
+              "EndOffset": 205,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ConsultaCep.Infrastructure.Notification.dll": {
+    "/Users/leandroandrade/Source/Personal/aws-lambda-injecao-dependencia-consulta-cep/ConsultaCep/src/ConsultaCep.Infrastructure.Notification/Models/NotificationMessage.cs": {
+      "ConsultaCep.Infrastructure.Notification.Models.NotificationMessage": {
+        "System.String ConsultaCep.Infrastructure.Notification.Models.NotificationMessage::get_Message()": {
+          "Lines": {
+            "5": 4
+          },
+          "Branches": []
+        },
+        "System.Void ConsultaCep.Infrastructure.Notification.Models.NotificationMessage::.ctor(System.String)": {
+          "Lines": {
+            "7": 2,
+            "8": 2,
+            "9": 2,
+            "10": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/leandroandrade/Source/Personal/aws-lambda-injecao-dependencia-consulta-cep/ConsultaCep/src/ConsultaCep.Infrastructure.Notification/Abstractions/Notifiable.cs": {
+      "ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable": {
+        "System.Boolean ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::get_HasErrorNotification()": {
+          "Lines": {
+            "16": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::get_HasSuccessNotification()": {
+          "Lines": {
+            "20": 2
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyList`1<ConsultaCep.Infrastructure.Notification.Models.NotificationMessage> ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::get_ErrorNotificationResult()": {
+          "Lines": {
+            "24": 11
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyList`1<ConsultaCep.Infrastructure.Notification.Models.NotificationMessage> ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::get_SuccessNotificationResult()": {
+          "Lines": {
+            "28": 4
+          },
+          "Branches": []
+        },
+        "System.Void ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::AddErrorNotification(ConsultaCep.Infrastructure.Notification.Models.NotificationMessage)": {
+          "Lines": {
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Void ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::AddErrorNotification(System.String)": {
+          "Lines": {
+            "40": 2,
+            "41": 2,
+            "42": 2,
+            "43": 2
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 41,
+              "Offset": 12,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::AddErrorNotification(System.Collections.Generic.IList`1<System.String>)": {
+          "Lines": {
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 9,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::AddErrorNotification(System.Collections.Generic.IEnumerable`1<ConsultaCep.Infrastructure.Notification.Models.NotificationMessage>)": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0
+          },
+          "Branches": [
+            {
+              "Line": 53,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 9,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::AddSuccessNotification(ConsultaCep.Infrastructure.Notification.Models.NotificationMessage)": {
+          "Lines": {
+            "58": 0
+          },
+          "Branches": []
+        },
+        "System.Void ConsultaCep.Infrastructure.Notification.Abstractions.Notifiable::.ctor()": {
+          "Lines": {
+            "30": 3,
+            "31": 3,
+            "32": 3,
+            "33": 3,
+            "34": 3
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
